@@ -1,9 +1,4 @@
-.warenkorb{
-    top: 100px;
-    right: 20px; 
-    width: 300px;
-    height: auto;
-}
+
 
 .first-img {
     width: 100%;
@@ -24,7 +19,7 @@
 .section-two {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    margin-left: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -40,7 +35,8 @@
 }
 
 .section-three {
-    padding: 20px;
+    margin-left: 15px;
+    /* padding: 20px; */
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgb(247, 246, 242);
@@ -58,7 +54,8 @@
 }
 
 .section-four {
-    padding: 20px;
+    margin-left: 15px;
+    /* padding: 20px; */
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -83,4 +80,11 @@
     object-fit: cover;
     /* border-radius: 20px; */
     gap: 5px;
+}
+
+.warenkorb{
+    top: 100px;
+    right: 20px; 
+    width: 300px;
+    height: auto;
 }

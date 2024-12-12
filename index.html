@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/dishes.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/basket.css">
     <!-- script -->
     <script src="./scripts/script.js"></script>
     <script src="./scripts/db.js"></script>
 
 </head>
 
-<body>
+<body onload="onload()">
     <header>
         <div class="header-class">
             <img src="./img/icons/Logo/Bestell_App_Logo.svg" alt="">
@@ -31,15 +32,7 @@
     </header>
 
     <section class="main-flex">
-
-        <section class="warenkorb">
-            <h2>Warenkorb</h2>
-            <ul id="warenkorb-items">
-
-            </ul>
-        </section>
-
-        <section>
+        <section class="main-content">
             <section class="mainsection sections-one">
                 <div>
                     <img class="first-img" src="./img/main/header.jpg" alt="">
@@ -64,13 +57,24 @@
                 <img class="second-img" src="./img/main/maindish.jpg" alt="">
                 <h3 id="hauptspeisen">Hauptspeisen</h3>
             </section>
+            <section id="content">
+
+
+            </section>
 
 
             <section class="mainsection section-five">
                 <img class="third-img" src="./img/main/sidedishes.jpg" alt="">
                 <h3 id="beilagen">Beilagen</h3>
             </section>
+        </section>
 
+
+        <section class="warenkorb">
+            <h2>Warenkorb</h2>
+            <ul id="basket-items">
+
+            </ul>
         </section>
 
     </section>
@@ -80,3 +84,6 @@
 </body>
 
 </html>
+
+
+<div></div>

@@ -1,0 +1,44 @@
+.content-section {
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px black;
+}
+
+.food-name {
+    font-size: 32px;
+    font-weight: bold;
+
+}
+
+.food-img {
+    width: 150px;
+    height: 150px;
+}
+
+.food-sorting {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+.food-sorting2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.food-sorting3 {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.food-button {
+    width: 30px;
+    height: 30px;
+}

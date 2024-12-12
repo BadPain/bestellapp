@@ -35,8 +35,12 @@ header img {
     margin: auto;
 }
 
-/* .main-flex{
+.main-flex{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
+    /* justify-content: space-around;
+    align-items: center; */
+}
+
+.main-content{
+    width: 100%;
+}
