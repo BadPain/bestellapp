@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./styles/dishes.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <!-- script -->
     <script src="./scripts/script.js"></script>
     <script src="./scripts/db.js"></script>
@@ -32,7 +33,7 @@
     </header>
 
     <section class="main-flex">
-        <section class="main-content">
+        <section class="main-content" id="content-container">
             <section class="mainsection sections-one">
                 <div>
                     <img class="first-img" src="./img/main/header.jpg" alt="">
@@ -71,15 +72,21 @@
 
 
         <section class="warenkorb">
-            <h2>Warenkorb</h2>
+            <h2 class="warenkorb-h2">Warenkorb</h2>
             <ul id="basket-items">
-
             </ul>
+            <div id="price"></div>
         </section>
 
     </section>
     <footer>
-
+        <div class="footer-class">
+            <img src="./img/icons/Logo/Bestell_App_Logo.svg" alt="">
+            <div>
+                <p>Copyright &copy; 2024</p>
+                <p>All rights reserved</p>
+            </div>
+        </div>
     </footer>
 </body>
 

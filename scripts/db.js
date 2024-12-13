@@ -46,3 +46,4 @@ let basket_items = [
 ];
 
 let basket = [];
+let price = [];
