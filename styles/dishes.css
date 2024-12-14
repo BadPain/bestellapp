@@ -18,6 +18,13 @@
     height: 150px;
 }
 
+.food-info {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
 .food-sorting {
     display: flex;
     flex-direction: column-reverse;
@@ -26,9 +33,7 @@
 
 .food-sorting2 {
     display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
-    gap: 20px;
+    justify-content: space-around;
 }
 
 .food-sorting3 {
@@ -39,6 +44,17 @@
 }
 
 .food-button {
+    display: flex;
+    align-items: center;
+    color: orange;
+    font-size: 25px;
     width: 30px;
     height: 30px;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
 }

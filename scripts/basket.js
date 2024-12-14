@@ -1,19 +1,6 @@
 let priceTotal = 0;
 let priceDeliveriy = 0;
 
-function onload() {
-    getFromLocalStorage();
-    renderFood();
-}
-
-function renderFood() {
-    let foodContent = document.getElementById('content');
-
-    for (let indexFood = 0; indexFood < basket_items.length; indexFood++) {
-        foodContent.innerHTML += getFoodTemplate(indexFood);
-    }
-}
-
 function addToBasket(indexFood) {
     let product = basket_items[indexFood];
     let existingProduct = basket.find(item => item.name === product.name);
@@ -67,8 +54,6 @@ function renderBasketView() {
             </div>
         </div>
         `
-
-
     }
     renderPrice()
 }
@@ -114,22 +99,6 @@ function getBasketContent(indexFood) {
     basketElement.innerHTML += addToBasket(indexFood);
 }
 
-function getFoodTemplate(indexFood) {
-    return `
-        <div class="mainsection content-section">
-            <div class="food-sorting">
-                <div class="food-sorting2">
-                    <img class="food-img" src="${basket_items[indexFood].img}" alt="">
-                    <p class="price">${basket_items[indexFood].price} €</p>
-                    <h3 class="food-name">${basket_items[indexFood].name}</h3>
-                </div>
-                <div class="food-sorting3">
-                    <button type="button" class="food-button" id="basket${indexFood}" onclick="addToBasket(${indexFood})">+</button>
-                </div>
-            </div>
-        </div>
-    `
-}
 
 function saveToLocalStorage() {
     localStorage.setItem("basket", JSON.stringify(basket));

@@ -1,19 +1,28 @@
-
-
-.first-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    /* border-radius: 20px; */
-    gap: 5px;
-}
-
 .sections-one {
     display: flex;
     flex-direction: column;
     padding-bottom: 20px;
     color: rgb(0, 0, 0);
-    font-size: 20px;
+}
+
+.img-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    gap: 5px;
+}
+
+.second-img{
+    position: absolute;
+    top: 200px;
+    width: 100px;
+    height: 100px;
 }
 
 .section-two {
@@ -21,7 +30,6 @@
     flex-direction: column;
     margin-left: 15px;
     margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .h3 {
@@ -36,7 +44,6 @@
 
 .section-three {
     margin-left: 15px;
-    /* padding: 20px; */
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: rgb(247, 246, 242);
@@ -55,21 +62,6 @@
 
 .section-four {
     margin-left: 15px;
-    /* padding: 20px; */
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.second-img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    /* border-radius: 20px; */
-    gap: 5px;
-}
-
-.section-five {
-    padding: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -78,13 +70,12 @@
     width: 100%;
     height: 150px;
     object-fit: cover;
-    /* border-radius: 20px; */
     gap: 5px;
+    top: 200px;
 }
 
-.warenkorb{
-    top: 100px;
-    right: 20px; 
-    width: 300px;
-    height: auto;
+.section-five {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

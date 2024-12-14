@@ -1,0 +1,9 @@
+@media (max-width: 1225px) {
+    .main-flex {
+        flex-direction: column;
+    }
+
+    .warenkorb {
+        max-width: 100%;
+    }
+}

@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/responsive.css">
     <!-- script -->
-    <script src="./scripts/script.js"></script>
     <script src="./scripts/db.js"></script>
+    <script src="./scripts/renderFood.js"></script>
+    <script src="./scripts/basket.js"></script>
 
 </head>
 
@@ -35,13 +36,14 @@
     <section class="main-flex">
         <section class="main-content" id="content-container">
             <section class="mainsection sections-one">
-                <div>
+                <div class="img-main">
                     <img class="first-img" src="./img/main/header.jpg" alt="">
+                    <img class="second-img" src="./img/icons/Logo/miniLogo.svg" alt="">
                 </div>
-            </section>
-            <section class="mainsection section-two">
-                <h3 class="h3">La Palma Pizza</h3>
-                <p class="bewertung">Bewertung 4 von 5 Sternen</p>
+                <section class="mainsection section-two">
+                    <h3 class="h3">La Palma Pizza</h3>
+                    <p class="bewertung">Bewertung 4 von 5 Sternen</p>
+                </section>
             </section>
 
 
@@ -55,12 +57,10 @@
 
 
             <section class="mainsection section-four">
-                <img class="second-img" src="./img/main/maindish.jpg" alt="">
+                <img class="third-img" src="./img/main/maindish.jpg" alt="">
                 <h3 id="hauptspeisen">Hauptspeisen</h3>
             </section>
             <section id="content">
-
-
             </section>
 
 
@@ -68,14 +68,32 @@
                 <img class="third-img" src="./img/main/sidedishes.jpg" alt="">
                 <h3 id="beilagen">Beilagen</h3>
             </section>
+            <section id="sidedish">
+            </section>
+
+            <section class="mainsection section-five">
+                <img class="third-img" src="./img/main/salate.jpg" alt="">
+                <h3 id="salate">Salate</h3>
+            </section>
+            <section id="salate">
+            </section>
+
+            <section class="mainsection section-five">
+                <img class="third-img" src="./img/main/drinks.jpg" alt="">
+                <h3 id="drinks">Getränke</h3>
+            </section>
+            <section id="drinks">
+            </section>
         </section>
 
 
-        <section class="warenkorb">
-            <h2 class="warenkorb-h2">Warenkorb</h2>
-            <ul id="basket-items">
-            </ul>
-            <div id="price"></div>
+        <section class="main-warenkorb">
+            <div class="warenkorb">
+                <h2 class="warenkorb-h2">Warenkorb</h2>
+                <ul id="basket-items">
+                </ul>
+                <div id="price"></div>
+            </div>
         </section>
 
     </section>
