@@ -32,9 +32,11 @@
     margin-top: 15px;
 }
 
-.h3 {
+h3 {
     font-size: 32px;
     gap: 5px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .bewertung {
@@ -49,13 +51,25 @@
     background-color: rgb(247, 246, 242);
 }
 
-.navbar {
+.navbar-second {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+.navbar-second a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.navbar-img {
+.navbar-second a:hover {
+    color:#00A0C6; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+.navbar-second-img {
     width: 30px;
     height: 100%;
 }

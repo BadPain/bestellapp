@@ -4,28 +4,54 @@ function onload() {
 }
 
 function renderFood() {
-    let mainfood = document.getElementById('content');
-    let sidedished = document.getElementById('sidedish');
-    let salad = document.getElementById('salate');
-    let drink = document.getElementById('drinks');
+    // let maindishes = document.getElementById('content');
+    // let sidedishes = document.getElementById('sidedish');
+    // let salad = document.getElementById('salate');
+    // let drink = document.getElementById('drinks');
 
     for (let indexFood = 0; indexFood < basket_items.length; indexFood++) {
-        mainfood.innerHTML += getFoodTemplate(indexFood);
-    }
+        let category = basket_items[indexFood].category;
 
-    for (let indexSideDished = 0; indexSideDished < sidedish.length; indexSideDished++) {
-        sidedished.innerHTML += getSideDishedTemplate(indexSideDished);
-    }
 
-    for (let indexSalads = 0; indexSalads < salads.length; indexSalads++) {
-        salad.innerHTML += getSaladeTemplate(indexSalads);
+        if (category === "maindishes") {
+            document.getElementById('maindishes').innerHTML += getFoodTemplate(indexFood);
+        } else if (category === "sidedishes") {
+            document.getElementById('sidedishes').innerHTML += getFoodTemplate(indexFood);
+        } else if (category === "salads") {
+            document.getElementById('salads').innerHTML += getFoodTemplate(indexFood);
+        } else if (category === "drinks") {
+            document.getElementById('drinks').innerHTML += getFoodTemplate(indexFood);
+        }
     }
-
-    for (let indexDrinks = 0; indexDrinks < drinks.length; indexDrinks++) {
-        drink.innerHTML += getDrinksTemplate(indexDrinks);
-    }
-
 }
+
+// let sidedishes = basket_items[indexFood].category.sidedishes;
+// let salad = basket_items[indexFood].category.salads;
+// let drink = basket_items[indexFood].category.drinks;
+// console.log(maindishes);
+// console.log(basket_items[indexFood].category.sidedishes);
+// console.log(basket_items[indexFood].category);
+// console.log(basket_items[indexFood].category);
+
+
+// maindishes.innerHTML += getFoodTemplate(indexFood);
+
+
+
+
+// for (let indexSideDishes = 0; indexSideDishes < sidedish.length; indexSideDishes++) {
+//     sidedishes.innerHTML += getSideDishedTemplate(indexSideDished);
+// }
+
+// for (let indexSalads = 0; indexSalads < salads.length; indexSalads++) {
+//     salad.innerHTML += getSaladeTemplate(indexSalads);
+// }
+
+// for (let indexDrinks = 0; indexDrinks < drinks.length; indexDrinks++) {
+//     drink.innerHTML += getDrinksTemplate(indexDrinks);
+// }
+
+
 
 function getFoodTemplate(indexFood) {
     return `
@@ -46,59 +72,60 @@ function getFoodTemplate(indexFood) {
     `
 }
 
-function getSideDishedTemplate(indexSideDished) {
-    return `
-        <div class="mainsection content-section">
-            <div class="food-sorting">
-                <div class="food-sorting2">
-                    <img class="food-img" src="${sidedish[indexSideDished].img}" alt="">
-                    <div class="food-info">
-                        <p class="price">${sidedish[indexSideDished].price} €</p>
-                        <h3 class="food-name">${sidedish[indexSideDished].name}</h3>
-                    </div>
-                    </div>
-                <div class="food-sorting3">
-                    <button type="button" class="food-button" id="basket${indexSideDished}" onclick="addToBasket(${indexSideDished})">+</button>
-                </div>
-            </div>
-        </div>
-    `
-}
 
-function getSaladeTemplate(indexSalads) {
-    return `
-        <div class="mainsection content-section">
-            <div class="food-sorting">
-                <div class="food-sorting2">
-                    <img class="food-img" src="${salads[indexSalads].img}" alt="">
-                    <div class="food-info">
-                        <p class="price">${salads[indexSalads].price} €</p>
-                        <h3 class="food-name">${salads[indexSalads].name}</h3>
-                    </div>
-                    </div>
-                <div class="food-sorting3">
-                    <button type="button" class="food-button" id="basket${indexSalads}" onclick="addToBasket(${indexSalads})">+</button>
-                </div>
-            </div>
-        </div>
-    `
-}
+// function getSideDishedTemplate(indexFood) {
+//     return `
+//         <div class="mainsection content-section">
+//             <div class="food-sorting">
+//                 <div class="food-sorting2">
+//                     <img class="food-img" src="${sidedish[indexFood].img}" alt="">
+//                     <div class="food-info">
+//                         <p class="price">${sidedish[indexFood].price} €</p>
+//                         <h3 class="food-name">${sidedish[indexFood].name}</h3>
+//                     </div>
+//                     </div>
+//                 <div class="food-sorting3">
+//                     <button type="button" class="food-button" id="basket${indexFood}" onclick="addToBasket(${indexFood})">+</button>
+//                 </div>
+//             </div>
+//         </div>
+//     `
+// }
 
-function getDrinksTemplate(indexDrinks) {
-    return `
-        <div class="mainsection content-section">
-            <div class="food-sorting">
-                <div class="food-sorting2">
-                    <img class="food-img" src="${drinks[indexDrinks].img}" alt="">
-                    <div class="food-info">
-                        <p class="price">${drinks[indexDrinks].price} €</p>
-                        <h3 class="food-name">${drinks[indexDrinks].name}</h3>
-                    </div>
-                    </div>
-                <div class="food-sorting3">
-                    <button type="button" class="food-button" id="basket${indexDrinks}" onclick="addToBasket(${indexDrinks})">+</button>
-                </div>
-            </div>
-        </div>
-    `
-}
+// function getSaladeTemplate(indexSalads) {
+//     return `
+//         <div class="mainsection content-section">
+//             <div class="food-sorting">
+//                 <div class="food-sorting2">
+//                     <img class="food-img" src="${salads[indexSalads].img}" alt="">
+//                     <div class="food-info">
+//                         <p class="price">${salads[indexSalads].price} €</p>
+//                         <h3 class="food-name">${salads[indexSalads].name}</h3>
+//                     </div>
+//                     </div>
+//                 <div class="food-sorting3">
+//                     <button type="button" class="food-button" id="basket${indexSalads}" onclick="addToBasket(${indexSalads})">+</button>
+//                 </div>
+//             </div>
+//         </div>
+//     `
+// }
+
+// function getDrinksTemplate(indexDrinks) {
+//     return `
+//         <div class="mainsection content-section">
+//             <div class="food-sorting">
+//                 <div class="food-sorting2">
+//                     <img class="food-img" src="${drinks[indexDrinks].img}" alt="">
+//                     <div class="food-info">
+//                         <p class="price">${drinks[indexDrinks].price} €</p>
+//                         <h3 class="food-name">${drinks[indexDrinks].name}</h3>
+//                     </div>
+//                     </div>
+//                 <div class="food-sorting3">
+//                     <button type="button" class="food-button" id="basket${indexDrinks}" onclick="addToBasket(${indexDrinks})">+</button>
+//                 </div>
+//             </div>
+//         </div>
+//     `
+// }

@@ -18,17 +18,36 @@
     <script src="./scripts/db.js"></script>
     <script src="./scripts/renderFood.js"></script>
     <script src="./scripts/basket.js"></script>
+    <script src="./scripts/responsive.js"></script>
 
 </head>
 
 <body onload="onload()">
     <header>
         <div class="header-class">
-            <img src="./img/icons/Logo/Bestell_App_Logo.svg" alt="">
-            <nav class="navlist hide-mobile">
-                <a href="#" class="">Start</a>
-                <a href="#" class="">Kontakt</a>
-                <a href="#" class="">Impressum</a>
+            <img class="header-img" src="./img/icons/Logo/Bestell_App_Logo.svg" alt="">
+            <nav class="navlist desktop-nav">
+                <a href="#">Start</a>
+                <!-- <a href="#hauptspeisen">Hauptgerichte</a>
+                <a href="#beilagen">Beilagen</a>
+                <a href="#salate">Salate</a>
+                <a href="#getraenke">Getränke</a> -->
+                <a href="/rechtliches.html">Rechtliches</a>
+            </nav>
+
+            <div class="burger-menu">
+                <button class="burger-button" onclick="toggleNav()">
+                    <img src="./img/icons/burger-menu.svg" alt="Burger Menu">
+                </button>
+            </div>
+
+            <nav id="mobile-nav" class="navlist mobile-nav hide">
+                <a href="#">Start</a>
+                <a href="#hauptspeisen">Hauptgerichte</a>
+                <a href="#beilagen">Beilagen</a>
+                <a href="#salate">Salate</a>
+                <a href="#getraenke">Getränke</a>
+                <a href="#">Rechtliches</a>
             </nav>
         </div>
     </header>
@@ -48,10 +67,12 @@
 
 
             <section class="mainsection section-three">
-                <nav class="navbar">
-                    <img class="navbar-img" src="./img/icons/navbar.svg" alt="">
-                    <a href="#hauptspeisen" class="">Hauptgerichte</a>
-                    <a href="#beilagen" class="">Beilagen</a>
+                <nav class="navbar-second">
+                    <img class="navbar-second-img" src="./img/icons/navbar.svg" alt="">
+                    <a href="#hauptspeisen">Hauptgerichte</a>
+                    <a href="#beilagen">Beilagen</a>
+                    <a href="#salate">Salate</a>
+                    <a href="#getraenke">Getränke</a>
                 </nav>
             </section>
 
@@ -60,7 +81,7 @@
                 <img class="third-img" src="./img/main/maindish.jpg" alt="">
                 <h3 id="hauptspeisen">Hauptspeisen</h3>
             </section>
-            <section id="content">
+            <section id="maindishes">
             </section>
 
 
@@ -68,25 +89,28 @@
                 <img class="third-img" src="./img/main/sidedishes.jpg" alt="">
                 <h3 id="beilagen">Beilagen</h3>
             </section>
-            <section id="sidedish">
+            <section id="sidedishes">
             </section>
 
             <section class="mainsection section-five">
                 <img class="third-img" src="./img/main/salate.jpg" alt="">
                 <h3 id="salate">Salate</h3>
             </section>
-            <section id="salate">
+            <section id="salads">
             </section>
 
             <section class="mainsection section-five">
                 <img class="third-img" src="./img/main/drinks.jpg" alt="">
-                <h3 id="drinks">Getränke</h3>
+                <h3 id="getraenke">Getränke</h3>
             </section>
             <section id="drinks">
             </section>
         </section>
-
-
+        <!-- Responsive Warenkorb -->
+        <section class="d-none">
+            <button class="warenkorb-resp" onclick="openBasket()"><h2 class="warenkorb-resp">Warenkorb</h2></button>
+        </section>
+        <!-- Responsive Warenkorb Ende -->
         <section class="main-warenkorb">
             <div class="warenkorb">
                 <h2 class="warenkorb-h2">Warenkorb</h2>

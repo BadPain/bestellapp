@@ -24,8 +24,38 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+/* navlist */
+.navlist {
+    display: flex;
+    gap: 20px;
+}
 
-header img {
+.desktop-nav {
+    display: flex;
+}
+
+.burger-button{
+    width: 50px;
+    height: 50px;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.header-img {
     width: 200px;
     height: 50px;
 }

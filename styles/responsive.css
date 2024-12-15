@@ -1,9 +1,142 @@
+.d_none {
+    display: none;
+}
+
+.d_block {
+    display: block;
+}
+
 @media (max-width: 1225px) {
     .main-flex {
         flex-direction: column;
     }
 
+    #content-container{
+        width: calc(100%);
+    }
+
+    .warenkorb-resp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: darkgreen;
+    }
+
     .warenkorb {
-        max-width: 100%;
+        /* max-width: 100%; */
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-warenkorb {
+        /* position: relative; */
+        flex-grow: 1;
+        width: 100%;
+    }
+    
+    .warenkorb {
+        /* position: sticky; */
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0px;
+        border: 1px solid black;
+        /* height: 100vh; */
+        top: 10px;
+    }
+    
+    .warenkorb-h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .basket-sorting {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .basket-sorting1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+    
+    .basket-img {
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+    }
+    
+    .basket-name {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        width: 150px;
+    }
+    
+    .basket-price {
+        font-size: 16px;
+    }
+    
+    .basket-calculate {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .basket-button {
+        display: flex;
+        justify-content: center;
+        width: 20px;
+        height: 100%;
+    }
+    
+    .basket-calculate-button {
+        background-color: orange;
+        color: orange;
+    }
+    
+    /* price sorting */
+    
+    .price-sorting {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .price-names {}
+    
+    .price-general {
+        margin-left: 15px;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.show {
+        display: flex;
     }
 }

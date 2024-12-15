@@ -1,0 +1,64 @@
+        .rechtliches-body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            height: auto;
+            width: 100%;
+        }
+
+        .rechtliches-header {
+            background-color: rgb(255, 128, 8);
+            color: rgb(0, 0, 0);
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        .rechtliches-h1,
+        .rechtliches-h2 {
+            margin-bottom: 10px;
+        }
+
+        .rechtliches-nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(249, 157, 71);
+        }
+
+        .rechtliches-nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .rechtliches-nav a:hover {
+            background-color: #575757;
+        }
+
+        .rechtliches-section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: rgb(255, 128, 8);
+            padding: 30px;
+        }
+        
+        .footer-class {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        footer img {
+            width: 200px;
+            height: 50px;
+        }
