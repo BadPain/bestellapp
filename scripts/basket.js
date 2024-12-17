@@ -13,6 +13,7 @@ function addToBasket(indexFood) {
 
     renderBasketView();
     saveToLocalStorage();
+    updateWarenkorb();
 }
 
 function increaseQuantity(index) {
@@ -20,6 +21,7 @@ function increaseQuantity(index) {
 
     renderBasketView();
     saveToLocalStorage();
+    updateWarenkorb();
 }
 
 function decreaseQuantity(index) {
@@ -31,6 +33,7 @@ function decreaseQuantity(index) {
 
     renderBasketView();
     saveToLocalStorage();
+    updateWarenkorb();
 }
 
 function renderBasketView() {
@@ -39,21 +42,7 @@ function renderBasketView() {
     basketWrapper.innerHTML = '';
 
     for (let i = 0; i < basket.length; i++) {
-        basketWrapper.innerHTML +=
-            `
-        <div class="basket-sorting">
-            <img class="basket-img" src="${basket[i].img}" alt="">
-            <div class="basket-sorting1">
-                <p class="basket-name">${basket[i].name}</p>
-                <p class="basket-price">${basket[i].price} €</p>
-                <div class="basket-calculate">
-                    <button onclick="increaseQuantity(${i})">+</button>
-                    <span id="quantity-${i}">${basket[i].quantity}</span>
-                    <button onclick="decreaseQuantity(${i})">-</button>
-                </div>
-            </div>
-        </div>
-        `
+        basketWrapper.innerHTML += getRenderBasketViewTemplate(basket, i);
     }
     renderPrice()
 }
@@ -72,33 +61,39 @@ function renderPriceTotal(basket) {
     }
 }
 
+function checkout() {
+    if (basket.length === 0) {
+        alert('Ihr Warenkorb ist leer!');
+        return;
+    }
+
+    let overlay = document.getElementById('checkout-overlay');
+    overlay.classList.remove('hidden');
+
+    setTimeout(() => {
+        basket = [];
+        renderBasketView();
+        saveToLocalStorage();
+        updateWarenkorb();
+    }, 2000);
+}
+
+function closeOverlay() {
+    let overlay = document.getElementById('checkout-overlay');
+    overlay.classList.add('hidden');
+}
+
 function renderPrice() {
     renderPriceTotal(basket)
     let priceElement = document.getElementById('price');
 
-    priceElement.innerHTML =
-        `
-        <div class="price-sorting">
-            <div class="price-names">
-                <p class="basket-price">Zwischensumme:</p>        
-                <p class="basket-price">Lieferkosten:</p>
-                <p class="basket-price">Gesamt:</p>
-                </div>
-            <div class="price-general">
-                <p class="basket-price">${priceTotal.toFixed(2)} €</p>
-                <p class="basket-price">${priceDeliveriy} €</p>
-                <p class="basket-price">${(priceTotal + priceDeliveriy).toFixed(2)}€</p>        
-            </div>
-        </div>
-        `
-
+    priceElement.innerHTML = getRenderPriceTemplate(priceTotal, priceDeliveriy);
 }
 
 function getBasketContent(indexFood) {
     let basketElement = document.getElementById('basket');
     basketElement.innerHTML += addToBasket(indexFood);
 }
-
 
 function saveToLocalStorage() {
     localStorage.setItem("basket", JSON.stringify(basket));
@@ -109,4 +104,5 @@ function getFromLocalStorage() {
     basket = Array.isArray(savedBasket) ? savedBasket : [];
 
     renderBasketView();
+    updateWarenkorb();
 }

@@ -2,40 +2,63 @@
     display: none;
 }
 
+#section-warenkorb-resp {
+    display: none;
+}
+
 .d_block {
     display: block;
 }
 
-@media (max-width: 1225px) {
+@media (max-width: 1000px) {
+    .mainsection {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
     .main-flex {
         flex-direction: column;
     }
 
-    #content-container{
+    #content-container {
         width: calc(100%);
     }
 
-    .warenkorb-resp{
+    #section-warenkorb-resp {
+        display: block;
+    }
+
+    .warenkorb-resp {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 50px;
-        background-color: darkgreen;
+        background-color: rgba(0, 147, 0, 0.627);
+        cursor: pointer;
+        /* position: sticky;
+        position: -webkit-sticky;
+        bottom: 0; */
     }
 
-    .warenkorb {
-        /* max-width: 100%; */
+    .main-warenkorb {
+        display: none;
     }
-}
 
-@media (max-width: 1000px) {
+    .d_none {
+        display: none;
+    }
+
+    .d_block {
+        display: block;
+    }
+
     .main-warenkorb {
         /* position: relative; */
         flex-grow: 1;
         width: 100%;
     }
-    
+
     .warenkorb {
         /* position: sticky; */
         width: 100%;
@@ -45,23 +68,23 @@
         /* height: 100vh; */
         top: 10px;
     }
-    
+
     .warenkorb-h2 {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 10px;
     }
-    
+
     .basket-sorting {
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: space-evenly;
+        align-items: center;
         gap: 5px;
         margin-right: 50px;
         margin-bottom: 10px;
     }
-    
+
     .basket-sorting1 {
         display: flex;
         flex-direction: column;
@@ -69,44 +92,44 @@
         align-items: center;
         padding-left: 10px;
     }
-    
+
     .basket-img {
         width: 90px;
         height: 90px;
         object-fit: cover;
     }
-    
+
     .basket-name {
         display: flex;
         justify-content: center;
         font-size: 16px;
         width: 150px;
     }
-    
+
     .basket-price {
         font-size: 16px;
     }
-    
+
     .basket-calculate {
         display: flex;
         gap: 10px;
         margin-top: 10px;
     }
-    
+
     .basket-button {
         display: flex;
         justify-content: center;
         width: 20px;
         height: 100%;
     }
-    
+
     .basket-calculate-button {
         background-color: orange;
         color: orange;
     }
-    
+
     /* price sorting */
-    
+
     .price-sorting {
         display: flex;
         justify-content: space-around;
@@ -114,9 +137,9 @@
         gap: 10px;
         margin-bottom: 10px;
     }
-    
+
     .price-names {}
-    
+
     .price-general {
         margin-left: 15px;
     }
@@ -138,5 +161,216 @@
 
     .mobile-nav.show {
         display: flex;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .second-img {
+        top: 205px;
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .second-img {
+        top: 210px;
+        height: 75px;
+        width: 75px;
+    }
+
+    .h3 {
+        font-size: 25px;
+    }
+
+    .bewertung {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .second-img {
+        top: 160px;
+        height: 75px;
+        width: 75px;
+    }
+
+    .h3 {
+        font-size: 25px;
+    }
+
+    .bewertung {
+        font-size: 14px;
+    }
+
+    .first-img {
+        height: 100px;
+    }
+
+    .third-img {
+        object-fit: cover;
+        height: 100px;
+    }
+
+    .food-name {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .food-img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 450px) {
+    .rechtliches-nav a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .rechtliches-h1{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .first-img {
+        height: 80px;
+    }
+
+    .second-img {
+        top: 150px;
+        height: 60px;
+        width: 60px;
+    }
+
+    .food-img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+
+    .navbar-second {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 365px) {
+    #basket-items {
+        margin-left: -20px;
+    }
+
+    .basket-sorting {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        /* margin-right: 50px; */
+        /* margin-bottom: 10px; */
+    }
+
+    .basket-sorting1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .basket-img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+
+    .basket-name {
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        width: 150px;
+    }
+
+    .basket-price {
+        font-size: 16px;
+    }
+
+    .basket-calculate {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .basket-button {
+        display: flex;
+        justify-content: center;
+        width: 20px;
+        height: 100%;
+    }
+
+    .basket-calculate-button {
+        background-color: orange;
+        color: orange;
+    }
+
+    /* price sorting */
+
+    .price-sorting {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 10px;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .price-names {}
+
+    .price-general {
+        margin-left: 15px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 350px) {
+    .basket-img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .rechtliches-nav a {
+        padding: 0px 5px;
+    }
+
+    .rechtliches-nav {
+        font-size: 10px;
+    }
+
+    .rechtliches-h1 {
+        font-size: 16px;
     }
 }

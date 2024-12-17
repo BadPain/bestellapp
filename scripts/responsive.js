@@ -3,40 +3,22 @@ function toggleNav() {
     mobileNav.classList.toggle("show");
 }
 
-function closeBasket() {
-    let overlayRef = document.getElementById('basket');
-    let mainarea = document.getElementById('mainarea_id');
-    overlayRef.style.display = "none";
-    mainarea.classList.remove('d_none');
-    document.getElementById('basket').innerHTML = "";
-}
-
-
 function openBasket() {
-    currentIndex = basket;
-    let overlayRef = document.getElementById('basket');
-    let mainarea = document.getElementById('content-container');
-    mainarea.classList.toggle('d_none');
-    document.getElementById('basket').style.removeProperty('display');
-    overlayRef.innerHTML +=
-        `
-    <div class="basket-sorting">
-            <img class="basket-img" src="${basket[i].img}" alt="">
-            <div class="basket-sorting1">
-                <p class="basket-name">${basket[i].name}</p>
-                <p class="basket-price">${basket[i].price} €</p>
-                <div class="basket-calculate">
-                    <button onclick="increaseQuantity(${i})">+</button>
-                    <span id="quantity-${i}">${basket[i].quantity}</span>
-                    <button onclick="decreaseQuantity(${i})">-</button>
-                </div>
-            </div>
-        </div>
-    `
+    let mainContentArea = document.getElementById('content-container');
+    let mainwarenkorb = document.getElementById('main-warenkorb');
+    mainContentArea.classList.toggle('d_none');
+    mainwarenkorb.classList.toggle('d_block');
 }
 
-const isDesktop = window.matchMedia("(min-width: 1200px)");
+function updateWarenkorb() {
+    let totalItems = 0;
+    let totalPrice = 0;
 
-if (isDesktop.matches) {
-    console.log('viewpoint above 1200px');
+    for (let i = 0; i < basket.length; i++) {
+        totalItems += basket[i].quantity;
+        totalPrice += basket[i].price * basket[i].quantity;
+    }
+    const warenkorbElement = document.getElementById('section-warenkorb-resp');
+
+    warenkorbElement.innerHTML = getUpdateWarenkorbTemplate(totalItems, totalPrice);
 }

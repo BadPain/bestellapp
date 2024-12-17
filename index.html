@@ -19,6 +19,7 @@
     <script src="./scripts/renderFood.js"></script>
     <script src="./scripts/basket.js"></script>
     <script src="./scripts/responsive.js"></script>
+    <script src="./scripts/mainTemplates.js"></script>
 
 </head>
 
@@ -28,10 +29,6 @@
             <img class="header-img" src="./img/icons/Logo/Bestell_App_Logo.svg" alt="">
             <nav class="navlist desktop-nav">
                 <a href="#">Start</a>
-                <!-- <a href="#hauptspeisen">Hauptgerichte</a>
-                <a href="#beilagen">Beilagen</a>
-                <a href="#salate">Salate</a>
-                <a href="#getraenke">Getränke</a> -->
                 <a href="/rechtliches.html">Rechtliches</a>
             </nav>
 
@@ -46,8 +43,8 @@
                 <a href="#hauptspeisen">Hauptgerichte</a>
                 <a href="#beilagen">Beilagen</a>
                 <a href="#salate">Salate</a>
-                <a href="#getraenke">Getränke</a>
-                <a href="#">Rechtliches</a>
+                <a href="#getraenke">Drinks</a>
+                <a href="./rechtliches.html">Rechtliches</a>
             </nav>
         </div>
     </header>
@@ -72,46 +69,46 @@
                     <a href="#hauptspeisen">Hauptgerichte</a>
                     <a href="#beilagen">Beilagen</a>
                     <a href="#salate">Salate</a>
-                    <a href="#getraenke">Getränke</a>
+                    <a href="#getraenke">Drinks</a>
                 </nav>
             </section>
 
-
             <section class="mainsection section-four">
-                <img class="third-img" src="./img/main/maindish.jpg" alt="">
-                <h3 id="hauptspeisen">Hauptspeisen</h3>
+                <img id="hauptspeisen" class="third-img" src="./img/main/maindish.jpg" alt="">
+                <h3>Hauptspeisen</h3>
             </section>
             <section id="maindishes">
             </section>
 
-
             <section class="mainsection section-five">
-                <img class="third-img" src="./img/main/sidedishes.jpg" alt="">
-                <h3 id="beilagen">Beilagen</h3>
+                <img id="beilagen" class="third-img" src="./img/main/sidedishes.jpg" alt="">
+                <h3>Beilagen</h3>
             </section>
             <section id="sidedishes">
             </section>
 
             <section class="mainsection section-five">
-                <img class="third-img" src="./img/main/salate.jpg" alt="">
-                <h3 id="salate">Salate</h3>
+                <img id="salate" class="third-img" src="./img/main/salate.jpg" alt="">
+                <h3>Salate</h3>
             </section>
             <section id="salads">
             </section>
 
             <section class="mainsection section-five">
-                <img class="third-img" src="./img/main/drinks.jpg" alt="">
-                <h3 id="getraenke">Getränke</h3>
+                <img id="getraenke" class="third-img" src="./img/main/drinks.jpg" alt="">
+                <h3>Drinks</h3>
             </section>
             <section id="drinks">
             </section>
         </section>
         <!-- Responsive Warenkorb -->
-        <section class="d-none">
-            <button class="warenkorb-resp" onclick="openBasket()"><h2 class="warenkorb-resp">Warenkorb</h2></button>
+        <section id="section-warenkorb-resp" class="d-none">
+            <button class="warenkorb-resp" onclick="openBasket()">
+                <h2 id="updateWarenkorbTitle" class="warenkorb-resp"></h2>
+            </button>
         </section>
         <!-- Responsive Warenkorb Ende -->
-        <section class="main-warenkorb">
+        <section id="main-warenkorb" class="main-warenkorb">
             <div class="warenkorb">
                 <h2 class="warenkorb-h2">Warenkorb</h2>
                 <ul id="basket-items">
@@ -119,10 +116,19 @@
                 <div id="price"></div>
             </div>
         </section>
-
+        <!-- Bestellung abgeschickt -->
+        <section>
+            <div id="checkout-overlay" class="overlay hidden">
+                <div class="overlay-content">
+                    <p>Ihre Bestellung wurde abgeschickt!</p>
+                    <button onclick="closeOverlay()">Schließen</button>
+                </div>
+            </div>
+        </section>
+        <!-- Bestellung abgeschickt Ende -->
     </section>
     <footer>
-        <div class="footer-class">
+        <div class="footer-class mainsection">
             <img src="./img/icons/Logo/Bestell_App_Logo.svg" alt="">
             <div>
                 <p>Copyright &copy; 2024</p>

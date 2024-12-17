@@ -86,11 +86,7 @@ let basket_items = [
 ];
 
 let sidedish = []
-
 let salads = []
-
 let drinks = []
-
-
 let basket = [];
 let price = [];
